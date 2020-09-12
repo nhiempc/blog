@@ -1,0 +1,30 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "nhiem's blog",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start" : "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhiempc/blog.git"
+  },
+  "keywords": [
+    "nhiem",
+    "blog"
+  ],
+  "author": "Nguyen Van Nhiem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhiempc/blog/issues"
+  },
+  "homepage": "https://github.com/nhiempc/blog#readme"
+}
