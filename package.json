@@ -6,16 +6,22 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
-    "handlebars": "^4.7.6"
+    "handlebars": "^4.7.6",
+    "mongoose": "^5.10.5"
   },
   "devDependencies": {
+    "husky": "^4.3.0",
+    "lint-staged": "^10.3.0",
     "morgan": "^1.10.0",
     "node-sass": "^4.14.1",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.1"
   },
   "scripts": {
+    "beautifull": "lint-staged",
+    "format-code": "prettier --single-quote --trailing-comma all --write src/**/*.{js,json,scss}",
     "start": "nodemon --inspect src/index.js",
-    "css" : "node-sass src/resources/scss/app.scss src/public/css/app.css",
+    "css": "node-sass src/resources/scss/app.scss src/public/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,5 +37,13 @@
   "bugs": {
     "url": "https://github.com/nhiempc/blog/issues"
   },
-  "homepage": "https://github.com/nhiempc/blog#readme"
+  "homepage": "https://github.com/nhiempc/blog#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
