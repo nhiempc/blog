@@ -2,15 +2,20 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "nhiem's blog",
-  "main": "index.js",
+  "main": "src/index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "handlebars": "^4.7.6"
   },
   "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^4.14.1",
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "start" : "nodemon --inspect index.js",
+    "start": "nodemon --inspect src/index.js",
+    "css" : "node-sass src/resources/scss/app.scss src/public/css/app.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
